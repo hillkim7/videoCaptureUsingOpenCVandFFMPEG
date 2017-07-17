@@ -121,13 +121,15 @@ void WebcamCapture::GrabVideo()
 
 	Print("capture thread start: device=%d", device_no_);
 
-	video_data.es = imgbuf.data();
 	video_data.len = imgbuf.size();
 
 	while (!stop_grabbing_.load())
 	{
 		*cv_cap_ >> image;
 
+		video_data.es = image.data;
+		video_data.stride = static_cast<int>(image.step[0]);
+		video_data.line_size = image.rows;
 		capture_callback_(this, &video_data);
 	}
 

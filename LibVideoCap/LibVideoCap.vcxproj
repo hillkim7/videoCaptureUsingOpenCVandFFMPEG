@@ -20,6 +20,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CaptureFactory.cpp" />
+    <ClCompile Include="EncodeImpl.cpp" />
+    <ClCompile Include="FFMPEGencoder.cpp" />
     <ClCompile Include="VideoCap.cpp" />
     <ClCompile Include="CaptureImpl.cpp" />
     <ClCompile Include="WebcamCapture.cpp" />
@@ -27,6 +29,8 @@
   <ItemGroup>
     <ClInclude Include="CaptureFactory.h" />
     <ClInclude Include="CaptureImpl.h" />
+    <ClInclude Include="EncodeImpl.h" />
+    <ClInclude Include="FFMPEGencoder.h" />
     <ClInclude Include="VideoCap.h" />
     <ClInclude Include="VideoCapDef.h" />
     <ClInclude Include="WebcamCapture.h" />

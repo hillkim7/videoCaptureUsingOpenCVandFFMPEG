@@ -4,12 +4,14 @@
 */
 
 #include "CaptureImpl.h"
+#include "EncodeImpl.h"
 
 class CaptureFactory
 {
 public:
 
 	static CaptureImpl* CreateVideoCapture(const char* capture_device);
+	static EncodeImpl* CreateVideoEncoder(const char* enocoder);
 
 };
 

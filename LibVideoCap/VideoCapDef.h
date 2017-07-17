@@ -24,6 +24,8 @@ typedef struct
 {
 	size_t len;		// length of ES data
 	uint8_t* es;	// video ES data
+	int stride;		// video lines
+	int line_size;	// video lines
 } VideoData_t;
 
 typedef void (*CapLogPrint_t)(const char *log_str);
